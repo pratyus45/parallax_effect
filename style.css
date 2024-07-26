@@ -1,0 +1,100 @@
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+#wrapper {
+    height: 100vh; /* Sets the wrapper height to 100% of the viewport height */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    overflow-y: auto; /* Allows vertical scrolling */
+    perspective: 10px; /* Sets the perspective for 3D space for child elements */
+}
+
+#container {
+    position: relative; /* Positions the container relative to its normal position */
+    display: flex; /* Uses flexbox layout to center content */
+    justify-content: center; /* Horizontally centers the child elements */
+    align-items: center; /* Vertically centers the child elements */
+    height: 100%; /* Sets the container height to 100% of the wrapper */
+    transform-style: preserve-3d; /* Preserves the 3D transformations of child elements */
+    z-index: -1;
+}
+
+.background {
+    transform: translateZ(-40px) scale(5); /* Moves the background image further away and scales it up */
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3); /* Moves the foreground image less far away and scales it up */
+}
+
+.background, .foreground {
+    position: absolute; /* Positions images absolutely within the container */
+    height: 100%; /* Sets the height of the images to 100% of the container */
+    width: 100%; /* Sets the width of the images to 100% of the container */
+    z-index: -1; /* Places the images behind other elements */
+    object-fit: cover; /* Ensures the images cover the entire area without stretching */
+}
+
+
+h1 {
+    position: absolute; /* Positions the heading relative to its normal position */
+    top: 5rem;
+   font-size: 10rem;
+   letter-spacing: 4px;
+   color: white;
+   text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+section{
+    background-color: rgb(45,45,45);
+    padding:5rem ;
+    color: white;
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding:0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+
+.bg{
+  position: relative;
+  width:100% ;
+  background-attachment: fixed;  /*img become static */
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.bg1 {
+  background-image: url(sport-1.jpg);
+  }
+
+  .bg2 {
+   background-image: url(sport-2.jpg);
+  }
+  
+  .bg3 {
+   background-image: url(sport-3.jpg);
+  }
